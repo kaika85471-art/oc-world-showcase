@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OC World Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="copyright-footer" class="copyright-text"></div>
+
+    <div id="app">
+        <button id="bgm-toggle" class="music-btn">🎵 BGM: OFF</button>
+
+        <div id="splash-screen" class="screen active">
+            <div class="splash-bg-container" id="bg-splash">
+                <div id="splash-marquee" class="scrolling-bg"></div>
+                <div class="splash-overlay"></div>
+            </div>
+
+            <div class="cinematic-bar top"></div>
+            <div class="cinematic-bar bottom"></div>
+            <div class="cinematic-line left"></div>
+            <div class="cinematic-line right"></div>
+
+            <div class="logo-container">
+                <h1 class="logo-text">MY WORLD</h1>
+                <p class="subtitle">Click to Enter</p>
+            </div>
+            <button id="start-btn" class="glow-btn">ENTER WORLD</button>
+        </div>
+
+        <div id="main-stage" class="screen">
+            <div class="bg-layer" id="bg-main"></div>
+
+            <div id="series-tabs" class="tabs-container"></div>
+
+            <div class="carousel-container"></div>
+
+            <button id="prev-char" class="char-nav-btn left">❮</button>
+            <button id="next-char" class="char-nav-btn right">❯</button>
+
+            <div class="nav-btn-group">
+                <div id="back-to-splash" class="nav-float-btn left-btn">▲ Title</div>
+                <div id="to-world-hint" class="nav-float-btn right-btn">World ▼</div>
+            </div>
+        </div>
+
+        <div id="world-stage" class="screen">
+            <div class="bg-layer" id="bg-world"></div>
+
+            <h2 class="section-title">WORLD VIEW</h2>
+            <div class="world-container">
+                <div class="world-visual">
+                    <div class="image-frame">
+                        <button class="nav-arrow left" id="prev-world">❮</button>
+                        <img id="world-img" src="" alt="World Image">
+                        <div class="security-overlay"></div>
+                        <button class="nav-arrow right" id="next-world">❯</button>
+                    </div>
+                </div>
+                <div class="world-text">
+                    <h3 id="world-title">Loading...</h3>
+                    <p id="world-desc">Select a world...</p>
+                </div>
+            </div>
+
+            <div class="nav-btn-group">
+                <div id="back-to-char" class="nav-float-btn left-btn">▲ Char</div>
+                <div id="to-profile-hint" class="nav-float-btn right-btn">Profile ▼</div>
+            </div>
+        </div>
+
+        <div id="profile-stage" class="screen">
+            <div class="bg-layer" id="bg-profile"></div>
+
+            <div class="profile-card">
+                <div class="profile-left">
+                    <div class="avatar-frame"><img id="creator-avatar" src=""></div>
+                    <div id="social-links-container" class="social-links-vertical"></div>
+                </div>
+
+                <div class="profile-right">
+                    <div class="profile-header-row">
+                        <div class="name-box">
+                            <h2 id="creator-name">Loading...</h2>
+                            <div id="creator-tagline" class="tagline-text"></div>
+                        </div>
+                        <div class="stats-stack">
+                            <button id="share-btn" class="stat-badge share">🔗 Share Link</button>
+                        </div>
+                    </div>
+
+                    <p id="creator-bio" class="bio-text">Loading...</p>
+
+                    <div class="action-buttons-row">
+                        <button id="comm-btn" class="big-action-btn">委託資訊</button>
+                        <button id="shop-btn" class="big-action-btn">作品賣場</button>
+                    </div>
+                </div>
+
+                <div class="safe-area-spacer"></div>
+            </div>
+
+            <div class="nav-btn-group">
+                <div id="back-to-world" class="nav-float-btn left-btn">▲ World</div>
+                <div id="back-home-btn" class="nav-float-btn back-style">Title ⌂</div>
+            </div>
+        </div>
+
+        <div id="comm-modal" class="modal-overlay">
+            <div class="modal-content">
+                <button class="close-x close-comm">×</button>
+                <h2>Commission Info</h2>
+                <div class="modal-body">
+                    <div class="business-contact-box">
+                        <p class="contact-label">📧 商業合作 / 委託聯繫信箱</p>
+                        <p id="biz-email" class="contact-email">loading...</p>
+                    </div>
+                    <p>【委託注意事項】<br>1. 請附上詳細設定<br>2. 修改次數限 2 次</p>
+                    <hr>
+                    <ul>
+                        <li>頭像：$1,000 TWD</li>
+                        <li>立繪：$4,000 TWD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="shop-modal" class="modal-overlay">
+            <div class="modal-content shop-style">
+                <button class="close-x close-shop">×</button>
+                <h2>Official Shop</h2>
+                <div class="marquee-container">
+                    <div class="marquee-track" id="shop-marquee"></div>
+                </div>
+                <div class="modal-footer">
+                    <p>歡迎參觀我的個人賣場！</p>
+                    <div id="shop-buttons-container" class="shop-buttons-grid"></div>
+                </div>
+            </div>
+        </div>
+
+        <audio id="bgm" loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

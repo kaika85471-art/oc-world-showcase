@@ -1,0 +1,178 @@
+{
+    "creatorInfo": {
+        "name": "幻筆 (Phantasia)",
+        "tagline": "我愛畫原創 — 熱愛繪製奇幻生物與賽博龐克風格的插畫家。",
+        "avatar": "https://placehold.co/300x300/222/FFF?text=P",
+        "bio": "目前主要活躍於 Pixiv，偶爾會在 Twitch 開台畫圖。\n歡迎追蹤我的社群以獲得最新資訊！",
+        "hasWorldView": true,
+        "acceptCommission": true,
+        "businessEmail": "phantasia_art@email.com",
+        "hasShop": true,
+        "socials": [
+            {
+                "platform": "Pixiv",
+                "url": "https://pixiv.net"
+            },
+            {
+                "platform": "Twitter/X",
+                "url": "https://twitter.com"
+            },
+            {
+                "platform": "Facebook",
+                "url": ""
+            },
+            {
+                "platform": "Instagram",
+                "url": ""
+            },
+            {
+                "platform": "Discord",
+                "url": ""
+            },
+            {
+                "platform": "Fanbox",
+                "url": "https://fanbox.cc"
+            },
+            {
+                "platform": "Patreon",
+                "url": ""
+            },
+            {
+                "platform": "Twitch",
+                "url": "https://twitch.tv"
+            },
+            {
+                "platform": "Youtube",
+                "url": "https://youtube.com"
+            }
+        ],
+        "shopLinks": [
+            {
+                "label": "前往 買動漫",
+                "url": "https://www.myacg.com.tw"
+            },
+            {
+                "label": "前往 賣貨便",
+                "url": "https://myship.7-11.com.tw"
+            },
+            {
+                "label": "前往 Melonbooks",
+                "url": "https://www.melonbooks.co.jp"
+            }
+        ],
+        "shareText": "幻筆 - 你最不可錯過的奇幻創作者！",
+        "copyrightText": "© 2026 幻筆版權所有",
+        "splashBgImages": [
+            "https://placehold.co/1920x1080/111/333?text=BG1",
+            "https://placehold.co/1920x1080/222/444?text=BG2",
+            "https://placehold.co/1920x1080/333/555?text=BG3",
+            "https://placehold.co/1920x1080/444/666?text=BG4"
+        ]
+    },
+    "seriesList": [
+        {
+            "seriesId": "A",
+            "seriesName": "邪神少女",
+            "characters": [
+                {
+                    "name": "阿爾法",
+                    "role": "天空守護者",
+                    "img": "https://placehold.co/600x800/png?text=Alpha+PNG",
+                    "story": "從小被邪教徒撫養長大的超能力少女，雖然擁有毀滅世界的力量，卻只想用它來守護流浪貓。\n\n厭惡下雨天，因為會弄濕她的火焰。",
+                    "settings": "【身高】162cm\n【體重】45kg\n【屬性】火 / 念力\n【喜歡】甜甜圈、晴天"
+                },
+                {
+                    "name": "貝塔",
+                    "role": "深淵凝視者",
+                    "img": "https://placehold.co/600x800/png?text=Beta+PNG",
+                    "story": "阿爾法的雙胞胎妹妹，性格沈默寡言。\n總是隨身攜帶一本厚重的古書，據說裡面記載了召喚古神的咒語。",
+                    "settings": "【身高】162cm\n【體重】44kg\n【屬性】暗影\n【喜歡】安靜的圖書館"
+                }
+            ],
+            "world": {
+                "title": "空中都市",
+                "desc": "這是屬於邪神少女們的戰場，漂浮在雲端之上的科技都市。",
+                "img": "https://placehold.co/800x600/222244/FFF?text=Sky+City"
+            }
+        },
+        {
+            "seriesId": "B",
+            "seriesName": "末世錄",
+            "characters": [
+                {
+                    "name": "伽瑪",
+                    "role": "荒原獵人",
+                    "img": "https://placehold.co/600x800/png?text=Gamma+PNG",
+                    "story": "在輻射荒原上獨自生存的賞金獵人。\n她的機械左臂是為了償還父親的債務而改造的。",
+                    "settings": "【身高】175cm\n【體重】60kg\n【武器】重型狙擊槍"
+                }
+            ],
+            "world": {
+                "title": "輻射荒原",
+                "desc": "文明毀滅後的世界，充滿了變異生物與機械殘骸。",
+                "img": "https://placehold.co/800x600/442222/FFF?text=Wasteland"
+            }
+        },
+        {
+            "seriesId": "C",
+            "seriesName": "時間之行",
+            "characters": [
+                {
+                    "name": "測試C",
+                    "role": "測試",
+                    "img": "https://placehold.co/600x800/png?text=TestC",
+                    "story": "測試用系列",
+                    "settings": ""
+                }
+            ],
+            "world": {
+                "title": "C世界",
+                "desc": "C",
+                "img": ""
+            }
+        },
+        {
+            "seriesId": "D",
+            "seriesName": "Abyss",
+            "characters": [
+                {
+                    "name": "測試D",
+                    "role": "測試",
+                    "img": "https://placehold.co/600x800/png?text=TestD",
+                    "story": "測試用系列",
+                    "settings": ""
+                }
+            ],
+            "world": {
+                "title": "D世界",
+                "desc": "D",
+                "img": ""
+            }
+        },
+        {
+            "seriesId": "E",
+            "seriesName": "Never",
+            "characters": [
+                {
+                    "name": "測試E",
+                    "role": "測試",
+                    "img": "https://placehold.co/600x800/png?text=TestE",
+                    "story": "測試用系列",
+                    "settings": ""
+                }
+            ],
+            "world": {
+                "title": "E世界",
+                "desc": "E",
+                "img": ""
+            }
+        }
+    ],
+    "shopData": [
+        "https://placehold.co/120x160/333/FFF?text=ArtBook",
+        "https://placehold.co/120x160/444/FFF?text=Merch",
+        "https://placehold.co/120x160/555/FFF?text=Badge",
+        "https://placehold.co/120x160/666/FFF?text=Sticker",
+        "https://placehold.co/120x160/777/FFF?text=Poster"
+    ]
+}
