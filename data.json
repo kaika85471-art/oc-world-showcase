@@ -1,13 +1,13 @@
 {
     "creatorInfo": {
-        "name": "幻筆 (Phantasia)",
-        "tagline": "我愛畫原創 — 熱愛繪製奇幻生物與賽博龐克風格的插畫家。",
+        "name": "Friedrich",
+        "tagline": "唯有畫原創才能更能表達自己的想法。",
         "avatar": "https://placehold.co/300x300/222/FFF?text=P",
-        "bio": "目前主要活躍於 Pixiv，偶爾會在 Twitch 開台畫圖。\n歡迎追蹤我的社群以獲得最新資訊！",
+        "bio": "創作的內容都很隨興，只要興致來了就是滿腦設定~\n基本上不太更新社群也不太上傳至P網...\n如果能喜歡我的創作就太好了~",
         "hasWorldView": true,
-        "acceptCommission": true,
+        "acceptCommission": false,
         "businessEmail": "phantasia_art@email.com",
-        "hasShop": true,
+        "hasShop": false,
         "socials": [
             {
                 "platform": "Pixiv",
@@ -60,8 +60,8 @@
                 "url": "https://www.melonbooks.co.jp"
             }
         ],
-        "shareText": "幻筆 - 你最不可錯過的奇幻創作者！",
-        "copyrightText": "© 2026 幻筆版權所有",
+        "shareText": "Friedrich - 由衷喜望你能喜歡我的作品！",
+        "copyrightText": "© 2026 Friedrich版權所有",
         "splashBgImages": [
             "https://placehold.co/1920x1080/111/333?text=BG1",
             "https://placehold.co/1920x1080/222/444?text=BG2",
@@ -175,4 +175,5 @@
         "https://placehold.co/120x160/666/FFF?text=Sticker",
         "https://placehold.co/120x160/777/FFF?text=Poster"
     ]
+
 }
