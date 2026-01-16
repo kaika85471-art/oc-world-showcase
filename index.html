@@ -12,7 +12,10 @@
     <div id="copyright-footer" class="copyright-text"></div>
 
     <div id="app">
-        <button id="bgm-toggle" class="music-btn">🎵 BGM: OFF</button>
+        <div class="music-wrapper">
+            <input type="range" id="volume-slider" min="0" max="1" step="0.01" class="volume-slider" title="Volume">
+            <button id="bgm-toggle" class="music-btn">🎵 BGM: OFF</button>
+        </div>
 
         <div id="splash-screen" class="screen active">
             <div class="splash-bg-container" id="bg-splash">
@@ -26,7 +29,7 @@
             <div class="cinematic-line right"></div>
 
             <div class="logo-container">
-                <h1 class="logo-text">Friedrich</h1>
+                <h1 class="logo-text">MY WORLD</h1>
                 <p class="subtitle">Click to Enter</p>
             </div>
             <button id="start-btn" class="glow-btn">ENTER WORLD</button>
@@ -144,14 +147,11 @@
         </div>
 
         <audio id="bgm" loop>
-            <source src="https://youfulca.com/wp-content/uploads/2022/08/Labyrinth-of-Time.mp3" type="audio/mpeg">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
         </audio>
     </div>
 
     <script src="script.js"></script>
 </body>
 
-
 </html>
-
-
