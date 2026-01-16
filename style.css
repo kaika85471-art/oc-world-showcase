@@ -238,11 +238,24 @@ a {
     text-shadow: 0 0 5px black;
 }
 
-.music-btn {
+/* =========================================
+   [UPDATE v1.01] 音量控制樣式
+   ========================================= */
+/* 包裹容器：負責定位與 Hover 感應 */
+.music-wrapper {
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 20000;
+    display: flex;
+    align-items: center;
+    /* 這裡不需要背景色，背景色在按鈕上 */
+}
+
+/* BGM 按鈕本體 */
+.music-btn {
+    /* 移除 fixed 定位，改由 wrapper 控制 */
+    position: relative;
     background: rgba(0, 0, 0, 0.7);
     color: #00d2ff;
     border: 1px solid #00d2ff;
@@ -250,12 +263,40 @@ a {
     border-radius: 20px;
     font-weight: bold;
     transition: 0.3s;
+    white-space: nowrap;
+    z-index: 2;
+    /* 確保按鈕在滑桿之上 */
 }
 
 .music-btn:hover {
     background: #00d2ff;
     color: black;
 }
+
+/* 音量滑桿 */
+.volume-slider {
+    width: 0px;
+    /* 預設隱藏 */
+    opacity: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: width 0.3s, opacity 0.3s;
+    /* 這裡的 delay 是重點：滑鼠離開後，等 2 秒才縮回去 */
+    transition-delay: 2s;
+    transform-origin: right center;
+}
+
+/* 當滑鼠懸停在整個 wrapper 上時，展開滑桿 */
+.music-wrapper:hover .volume-slider,
+.volume-slider:active,
+.volume-slider:focus {
+    width: 100px;
+    opacity: 1;
+    /* 展開時不需要延遲，立刻出來 */
+    transition-delay: 0s;
+}
+
+/* ----------------------------------------- */
 
 .nav-btn-group {
     position: absolute;
@@ -1010,8 +1051,6 @@ a {
     .safe-area-spacer {
         display: none;
     }
-
-    /* 電腦版不需要防撞墊 */
 }
 
 @media (max-width: 768px) {
@@ -1139,7 +1178,6 @@ a {
         margin-bottom: 50px;
     }
 
-    /* Mobile 灰色區塊修復 */
     .profile-card {
         flex-direction: column;
         width: 90%;
@@ -1147,7 +1185,6 @@ a {
         min-height: auto;
         padding: 20px;
         margin-bottom: 0;
-        /* 改為 0，讓 spacer 發揮作用 */
         padding-bottom: 20px;
         overflow: visible;
     }
@@ -1165,7 +1202,6 @@ a {
         width: 100%;
     }
 
-    /* 防撞墊設定：高度 200px，確保有足夠空間 */
     .safe-area-spacer {
         width: 100%;
         height: 200px;
@@ -1173,7 +1209,6 @@ a {
         flex-shrink: 0;
     }
 
-    /* 頂部間距調整 */
     .profile-header-row {
         flex-direction: column;
         align-items: center;
@@ -1182,9 +1217,7 @@ a {
         height: auto;
         margin-bottom: 30px;
         padding-top: 20px;
-        /* 增加內部上距 */
         margin-top: 20px;
-        /* 增加外部上距 */
     }
 
     .stats-stack {
@@ -1227,7 +1260,6 @@ a {
 
     .copyright-text {
         position: fixed;
-        /* 手機版也維持 Fixed 比較好，只要不擋到就好 */
         bottom: 5px;
         left: 0;
         width: 100%;
