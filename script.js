@@ -9,6 +9,8 @@ const worldStage = document.getElementById('world-stage');
 const profileStage = document.getElementById('profile-stage');
 const bgm = document.getElementById('bgm');
 const bgmToggle = document.getElementById('bgm-toggle');
+// [UPDATE v1.01] 音量滑桿
+const volumeSlider = document.getElementById('volume-slider');
 
 const commBtn = document.getElementById('comm-btn');
 const commModal = document.getElementById('comm-modal');
@@ -40,6 +42,12 @@ async function initWebsite() {
 
         renderStaticContent();
         renderSeriesTabs();
+
+        // [UPDATE v1.01] 設定初始音量
+        if (CONFIG.bgmVolume !== undefined) {
+            bgm.volume = CONFIG.bgmVolume;
+            if (volumeSlider) volumeSlider.value = CONFIG.bgmVolume;
+        }
 
         if (seriesList.length > 0 && seriesList[0].characters.length > 0) {
             switchSeries(0);
@@ -140,7 +148,6 @@ function renderStaticContent() {
     document.getElementById('creator-avatar').src = CONFIG.avatar;
     document.getElementById("biz-email").innerText = CONFIG.businessEmail;
 
-    // 版權文字：同時渲染兩個位置
     document.getElementById('copyright-footer').innerText = CONFIG.copyrightText || "";
     const mobileFooter = document.getElementById('copyright-footer-mobile');
     if (mobileFooter) mobileFooter.innerText = CONFIG.copyrightText || "";
@@ -231,7 +238,25 @@ function bindEvents() {
     document.getElementById("back-home-btn").addEventListener("click", () => { goToSection(splashScreen); currentSlide = 0; });
     nextCharBtn.addEventListener("click", () => { clearInterval(slideInterval); nextCharSlide(); slideInterval = setInterval(nextCharSlide, 8000); });
     prevCharBtn.addEventListener("click", () => { clearInterval(slideInterval); prevCharSlide(); slideInterval = setInterval(nextCharSlide, 8000); });
-    bgmToggle.addEventListener("click", () => { if (bgm.paused) { bgm.play(); bgmToggle.innerText = "🎵 BGM: ON"; } else { bgm.pause(); bgmToggle.innerText = "🎵 BGM: OFF"; } });
+    
+    // BGM 開關事件
+    bgmToggle.addEventListener("click", () => { 
+        if (bgm.paused) { 
+            bgm.play(); 
+            bgmToggle.innerText = "🎵 BGM: ON"; 
+        } else { 
+            bgm.pause(); 
+            bgmToggle.innerText = "🎵 BGM: OFF"; 
+        } 
+    });
+
+    // [UPDATE v1.01] 音量調整事件
+    if (volumeSlider) {
+        volumeSlider.addEventListener('input', (e) => {
+            bgm.volume = e.target.value;
+        });
+    }
+
     const shareBtn = document.getElementById("share-btn");
     shareBtn.addEventListener("click", () => {
         const text = `${CONFIG.shareText} ${window.location.href}`;
