@@ -8,7 +8,7 @@
         "acceptCommission": false,
         "businessEmail": "phantasia_art@email.com",
         "hasShop": false,
-        "bgmVolume": 0.3,
+        "bgmVolume": 0.2,
         "socials": [
             {
                 "platform": "Pixiv",
@@ -178,4 +178,5 @@
     ]
 
 }
+
 
